@@ -18,17 +18,18 @@
             onclick=firstvowel()
           > Find </button>
         </div>
-        <p id="output" class="text-xl text-purple-400 text-center"></p>
+        <p id="output" class="text-xl font-semibold text-center mt-2"></p>
       </div>
     </section>
     <script>
     function firstvowel() {
       let input = document.getElementById("input").value;
       let output = document.getElementById("output");
+      let style = "<a class='text-purple-400'>";
 
       for (let ch of input.split("")) {
         if ("aeiouAEIOU".includes(ch)) {
-          output.innerHTML = ch;
+          output.innerHTML = "first vowel is " + style + ch + "</a>";
           return;
         }
       }
