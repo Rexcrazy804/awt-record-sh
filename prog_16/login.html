@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>University Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[url('https://wallpaperaccess.com/full/3480773.jpg')]">
+    <h1 class="mt-10 text-6xl text-slate-50 font-semibold text-center"> 
+      Welcome <a class="text-amber-500" id="name"></a>
+    </h1>
+    <div class="mt-10 flex flex-row w-full justify-center">
+      <div class="bg-slate-950 bg-opacity-50 p-3 flex flex-col gap-5 text-slate-50 w-3/4">
+        <h1 class="text-3xl text-center font-semibold"> Company Information </h1>
+        <p>
+          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+          mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+          aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit
+          esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+          proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
+          excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur
+          mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+          aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit
+          esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+          proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
+          excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+        </p>
+
+        <div
+          class="bg-[url('https://wallpapercave.com/wp/wp6257941.jpg')] bg-cover h-96 rounded-md w-3/4 self-center"
+        ></div>
+
+        <h1 class="text-3xl text-center font-semibold"> Our Purpose </h1>
+        <p>
+          At the heart of our company beats a passion for anime—an art form that transcends boundaries, captivating hearts and
+          minds worldwide. Our purpose is twofold: to celebrate the rich tapestry of anime, weaving together intricate narratives,
+          vibrant characters, and breathtaking visuals, and to share this passion with enthusiasts, both seasoned and budding.
+          Through our dedication to curating an eclectic selection of anime, we strive to create a space where individuals can
+          immerse themselves in worlds both familiar and fantastical, finding solace, inspiration, and connection.
+        </p>
+        <p>
+          Guided by our commitment to fostering a community of creativity and inclusivity, we aim to be more than just a platform;
+          we aspire to be a beacon of light, illuminating new perspectives, igniting imaginations, and nurturing the boundless
+          potential within each viewer. Together, let us embark on a journey where every frame tells a story, and every story
+          sparks a dream.
+        </p>
+      </div>
+
+    </div>
+    <script>
+      let url = window.location.href;
+      url = url
+        .split('?')[1]
+        // regex for removing + from GET
+        .split('=')[1].replace(/\+/g, ' '); 
+      document.getElementById("name").innerHTML = String(url);
+    </script>
+  </body>
+</html>

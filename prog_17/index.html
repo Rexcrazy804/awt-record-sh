@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-3xl text-blue-400 font-semibold mb-2">Register</h1> 
+      <form 
+        name="registration"
+        onsubmit=validate()
+        class="bg-slate-100 flex flex-col p-3 rounded-lg gap-1 font-semibold"
+      >
+        <div class="flex flex-row justify-between gap-3">
+          Name:
+          <input type="text" 
+            name="name"
+            class="text-center font-normal"
+          /> 
+        </div>
+
+        <div class="flex flex-row justify-between gap-3">
+          Zip Code:  
+          <select class="font-normal"> 
+            <option>2018</option> 
+            <option>8123</option> 
+            <option>1243</option> 
+          </select> 
+        </div>
+        <div class="flex flex-row justify-between gap-3">
+          Email id:
+          <input type="email" 
+            name="email"
+            class="text-center font-normal"
+          /> 
+        </div>
+        <div class="flex flex-row justify-between gap-3">
+          Country code:
+          <input type="text"
+            name="country"
+            class="text-center font-normal"
+          />
+        </div>
+        <input type="submit" 
+          class="bg-slate-300 hover:bg-slate-200 w-fit p-3 self-center rounded-md mt-2 cursor-pointer"
+        /> 
+      </form> 
+    </section>
+    <script>
+    document.getElementsByName("registration")[0].addEventListener("submit", function (e) { e.preventDefault() });
+    function validate() {
+      let form = document.forms["registration"]
+
+      if (form["name"].value == "") {
+        alert("name is empty")
+      } else if (form["email"].value == "") {
+        alert("email is empty")
+      } else if (form["country"].value == "") {
+        alert("country code is empty")
+      } else {
+        alert("Form Submitted Successfully")
+      }
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prime or Armstrong?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-pink-400 font-semibold text-3xl text-center mb-2"> 
+        Prime or Armstrong
+      </h1>
+      <div class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg w-96">
+        <div class="flex flex-row p-2 gap-1 justify-around">
+          <p class="font-semibold">Enter a number</p>
+          <input type="number" id="number" class="text-center"/>
+        </div>
+        <div class="flex flex-row p-2 gap-3 justify-center">
+          <button
+            class="p-2 bg-slate-300 hover:bg-slate-200 w-32 rounded-md text-xl"
+            onclick=is_prime()
+          > Prime? </button>
+          <button
+            class="p-2 bg-slate-300 hover:bg-slate-200 w-32 rounded-md text-xl"
+            onclick=is_armstrong()
+          > Armstrong? </button>
+        </div>
+
+        <p id="output" class="text-xl text-center mt-2"></p>
+      </div>
+    </section>
+    <script>
+      let output = document.getElementById("output");
+
+      function is_prime() {
+        let num = document.getElementById("number").value;
+        for (let i = 2; i < num/2; i++) {
+          if (num % i == 0) {
+            output.innerHTML = num + " is NOT prime";
+            return;
+          }
+        }
+        output.innerHTML = "<a class='text-pink-400 font-semibold'>" + num + " is PRIME </a>";
+      }
+
+      function is_armstrong() {
+        let num = document.getElementById("number").value;
+        let str_num = String(num);
+        let exponent = str_num.length;
+
+        let result = 0;
+
+        for (let ch of str_num.split("")) {
+          result += Number(ch) ** exponent;
+        }
+
+        if (result == num) {
+          output.innerHTML = "<a class='text-pink-400 font-semibold'>" + num + " is ARMSTRONG</a>";
+        } else {
+          output.innerHTML = num + " is NOT armstrong</a>";
+        }
+      }
+    </script>
+  </body>
+</html>

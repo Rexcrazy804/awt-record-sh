@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Company information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-3xl font-semibold text-purple-400 mb-2">Company Form</h1>
+      <div class="flex flex-row gap-8 items-center">
+        <div class="bg-slate-100 flex flex-col p-4 gap-1 rounded-md">
+          <p class="font-semibold text-center">Employee Name</p>
+          <input 
+            type="text" id="name" value="Ann Rexi"
+            class="text-center" required
+          />
+          <p class="font-semibold text-center mt-1">Address</p>
+          <input 
+            type="text" id="addr" value="Kochi, Kerala"
+            class="text-center" required
+          />
+          <p class="font-semibold text-center mt-1">Email</p>
+          <input 
+            type="email" id="email" value="annrexie@gmail.com"
+            class="text-center" required
+          />
+          <button
+            class="bg-slate-300 hover:bg-slate-200 active:bg-slate-400 p-3 cursor-pointer mt-2 rounded-md"
+            onclick=update()
+          >Update</button>
+        </div>
+        <div class="bg-slate-100 flex flex-col p-4 text-2xl h-fit rounded-md">
+          <p name="output"/>
+          <p name="output"/>
+          <p name="output"/>
+        </div>
+      </div>
+    </section>
+    <script>
+      update(); // call once to display initial value
+      function update() {
+        let name = document.getElementById("name").value;
+        let addr = document.getElementById("addr").value;
+        let email = document.getElementById("email").value;
+        let output = document.getElementsByName("output");
+        let style = "<a class='text-pink-400 font-semibold'>"
+        output[0].innerHTML = "Employee: " + style + name + "</a>"
+        output[1].innerHTML = "Address: " + style + addr + "</a>";
+        output[2].innerHTML = "Email: " + style + email + "</a>";
+      }
+    </script>
+  </body>
+</html>

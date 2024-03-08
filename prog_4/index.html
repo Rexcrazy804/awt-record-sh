@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-3xl text-blue-400 font-semibold mb-2"> Form </h1>
+      <form class="bg-slate-100 flex flex-col p-3 rounded-lg gap-1">
+        <div class="flex flex-row justify-between">
+          Full name: 
+          <input type="text" name="fullname">
+        </div>
+
+        <div class="flex flex-row justify-between">
+          <p class="self-start">Gender: </p>
+          <div class="flex flex-row gap-3 justify-evenly">
+            <input type="radio" name="gender" value="male" class="">male</input>
+            <input type="radio" name="gender" value="female">female</input>
+            <input type="radio" name="gender" value="other">other</input>
+          </div>
+        </div>
+
+        <div class="flex flex-row justify-between">
+          Date of Birth: 
+          <input type="date" name="dob">
+        </div>
+        
+        <div class="flex flex-row justify-between">
+          Address:
+          <input type="text" name="address">
+        </div>
+
+        <div class="flex flex-row justify-between gap-3">
+          Favourite Subject: 
+          <input type="text" name="sub">
+        </div>
+
+        <div class="flex flex-row justify-between">
+          Favourite Singer: 
+          <input type="text" name="singer">
+        </div>
+
+        <div class="flex flex-row justify-between">
+          Favourite Movie: 
+          <input type="text" name="movie">
+        </div>
+        
+        <div class="flex flex-row justify-between">
+          Email Id:
+          <input type="email" name="email">
+        </div>
+        
+        <div class="flex flex-row justify-between">
+          Password:
+          <input type="password" name="pasw">
+        </div>
+
+        <input
+          class="bg-slate-300 hover:bg-slate-200 p-3 mt-2 rounded-md cursor-pointer"
+          type="submit" value="Submit"
+        >
+      </form> 
+    </section>
+    <script>
+    </script>
+  </body>
+</html>

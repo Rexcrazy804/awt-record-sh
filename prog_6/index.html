@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profit Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-orange-400 text-3xl font-semibold mb-2">Profit Calculator</h1>
+      <div class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg">
+        <div class="flex flex-row justify-evenly gap-2 w-52">
+          <button 
+            type="button" onclick="get()"
+            class="bg-slate-300 rounded-lg p-3 hover:bg-slate-200 active:bg-slate-400"
+          >
+            Input
+          </button>
+          <button 
+            type="button" onclick="profit()"
+            class="bg-slate-300 rounded-lg p-3 hover:bg-slate-200 active:bg-slate-400"
+          >
+            Output
+          </button>
+        </div>
+        <p 
+          id="output"
+          class="text-orange-400 text-xl text-center font-semibold font-sans"
+        ></p>
+      </div>
+    </section>
+    <script>
+      var profit;
+      var sell_price;
+      var cost_price;
+      function profit() {
+        profit = ((sell_price - cost_price)/cost_price ) * 100;
+        let result = "";
+        if (profit > 0) {
+          result = "Your profit is " + profit + "%"
+        } else {
+          result = "Your loss is " + profit + "%"
+        }
+        document.getElementById("output").innerHTML = result;
+      }
+
+      function get() {
+        cost_price = prompt("Enter Cost Price");
+        sell_price = prompt("Enter Selling Price");
+      }
+    </script>
+  </body>
+</html>
+

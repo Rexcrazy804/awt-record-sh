@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Random Number</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-3xl font-semibold text-red-400 mb-2">Random Number</h1>
+      <div class="bg-slate-100 flex flex-col p-3 rounded-lg">
+        <form class="flex flex-row overflow-hidden rounded-s">
+          <div class="flex flex-col">
+            <input 
+              type="text" placeholder="Enter Name"
+              class="text-center"
+            />
+            <input 
+              type="email" placeholder="Enter email"
+              class="text-center"
+            />
+          </div>
+          <input type="submit"
+            class="bg-slate-300 hover:bg-slate-200 p-3 cursor-pointer"
+          />
+        </form>
+        <div class="flex flex-row rounded-s overflow-hidden w-fit self-center">
+          <button
+            class="bg-slate-300 hover:bg-slate-200 p-3 cursor-pointer"
+            onclick=random()
+          > generate </button>
+          <p id="rand"
+            class="bg-white flex flex-col justify-center p-3 text-red-400 font-semibold"
+          > 84 </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function random() {
+        document.getElementById("rand")
+          .innerHTML = Math.floor(Math.random() * 100)
+      }
+    </script>
+  </body>
+</html>

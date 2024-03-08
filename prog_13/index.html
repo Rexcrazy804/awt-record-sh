@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Basic Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-3xl font-semibold text-teal-400 mb-2">Calculator</h1>
+      <div class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg">
+        <div class="flex flex-row rounded-md overflow-hidden">
+          <input
+            class="text-center"
+            placeholder="Enter Expression"
+            id="input"
+          />
+          <button
+            class="bg-slate-300 hover:bg-slate-200 p-3 active:bg-slate-400"
+            onclick=compute()
+          > Find </button>
+        </div>
+        <p id="output" class="text-xl text-teal-400 text-center mt-2"></p>
+      </div>
+    </section>
+    <script>
+    function compute() {
+      let input = document.getElementById("input").value.trim();
+      let output = document.getElementById("output");
+      let result = 0;
+      input = input.split(" ");
+      if (input.length != 3) {
+        output.innerHTML = "Invalid Expression";
+        return;
+      }
+      switch (input[1]) {
+        case "+":
+          result = Number(input[0]) + Number(input[2]);
+          break;
+        case "-":
+          result = Number(input[0]) - Number(input[2]);
+          break;
+        case "*":
+          result = Number(input[0]) * Number(input[2]);
+          break;
+        case "/":
+          result = Number(input[0]) / Number(input[2]);
+          break;
+        default:
+          output.innerHTML = "Invalid Expression";
+          break;
+      }
+
+      output.innerHTML = result;
+    }
+    </script>
+  </body>
+</html>

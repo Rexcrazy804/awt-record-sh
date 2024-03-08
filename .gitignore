@@ -1,0 +1,9 @@
+template.html
+main*
+!main.tex
+!main.pdf
+_minted-main
+node_modules
+package-lock.json
+package.json
+tailwind.config.js

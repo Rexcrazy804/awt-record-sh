@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Simple Html Page
+    </title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #eff1f5;
+        color: #4c4f69;
+        font-size: 1.3em;
+      }
+      body::-webkit-scrollbar { display: none;}
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e6e9ef;
+        border-radius: 8px;
+        padding: 0.5em;
+        gap: 3px;
+      }
+      .dark {
+        background-color: #dce0e8;
+      }
+      a {
+        color: #dc8a78;
+      }
+      #college-img {
+        background-image: url('https://www.shcollege.ac.in/wp-content/uploads/2020/11/mc-scaled.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 90vw;
+        height: 50vh;
+        border-radius: inherit;
+      }
+      li {
+        margin-right: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="top"></a>
+    <div class="container">
+      <h1>
+        <u>The Computer Science Department</u>
+      </h1>
+      <p>
+        The <b>Computer Science Department</b> of Sacred Heart College, Thevara was established in 2001.
+        And since have molded industry leading professionals. Orientations are held periodically to discuss advancements and
+        rising trends in the field enabling understanding of cutting-edge technologies. Students are provided with campus wide
+        <a href="https://en.wikipedia.org/wiki/Wi-Fi">Wi-Fi</a> available to their portable devices and Computer Systems
+        constituting a <a href="https://en.wikipedia.org/wiki/Local_area_network">Local Area Network</a>
+      </p>
+      <p style="font-weight: 550;">
+        The Department offers the following programs:
+        <div class="container dark">
+          <ul>
+            <li><b>B.Sc. Computer Applications</b> (Triple Main incl. Mathematics & Statistics)</li>
+            <li><b>B. Computer Applications</b> (BCA: Mobile Applications and Cloud technologies)</li>
+            <li><b>M. Sc. Integrated Computer Science</b> (Data Science)</li>
+          </ul>
+        </div>
+      </p>
+      <a id="college-img" href="https://www.shcollege.ac.in/">
+      </a>
+      <a href="#top" style="margin-top: 10px;">Back to top</a>
+    </div>
+  </body>
+</html>

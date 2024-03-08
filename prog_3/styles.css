@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eff1f5;
+  color: #4c4f69;
+  font-size: 1.3em;
+}
+body::-webkit-scrollbar { display: none;}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 15px;
+}
+p {
+  all: unset;
+  background-color: #e6e9ef;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+}
+.rose {
+  box-shadow: 5px 6px 5px #dc8a78;
+}
+.pink {
+  box-shadow: 5px 6px 5px #ea76cb;
+}
+.lavender {
+  box-shadow: 5px 6px 5px #7287fd;
+}
+.maroon {
+  box-shadow: 5px 6px 5px #e64553;
+}

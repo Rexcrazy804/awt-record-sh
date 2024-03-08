@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>First Vowel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-3xl font-semibold text-purple-400 mb-2">First Vowel</h1>
+      <div class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg">
+        <div class="flex flex-row">
+          <input
+            class="text-center"
+            placeholder="Enter a String"
+            id="input"
+          />
+          <button
+            class="bg-slate-300 hover:bg-slate-200 p-3"
+            onclick=firstvowel()
+          > Find </button>
+        </div>
+        <p id="output" class="text-xl text-purple-400 text-center"></p>
+      </div>
+    </section>
+    <script>
+    function firstvowel() {
+      let input = document.getElementById("input").value;
+      let output = document.getElementById("output");
+
+      for (let ch of input.split("")) {
+        if ("aeiouAEIOU".includes(ch)) {
+          output.innerHTML = ch;
+          return;
+        }
+      }
+      output.innerHTML = "No vowels found";
+    }
+    </script>
+  </body>
+</html>

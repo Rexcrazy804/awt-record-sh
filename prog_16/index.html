@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>University Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[url('https://wallpaperaccess.com/full/3480773.jpg')]">
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <form
+        class="bg-slate-950 flex flex-col p-4 gap-1 rounded-md text-white bg-opacity-55"
+        action=login.html
+        method="get"
+      >
+        <h1 class="mb-4 text-3xl text-amber-500 font-semibold text-center"> 
+          Login
+        </h1>
+        <div class="flex flex-row justify-between">
+          <p class="font-semibold">Name:</p>
+          <input 
+            class="w-3/4 rounded-md text-center bg-transparent border-slate-200 border-2"
+            name="name"
+            type="text" required
+          />
+        </div>
+        <div class="flex flex-row justify-between">
+          <p class="font-semibold">Password:</p>
+          <input 
+            class="w-2/4 rounded-md text-center bg-transparent border-slate-200 border-2"
+            type="password"  required
+          />
+        </div>
+        <input 
+          class="w-fit self-center p-3 rounded-md mt-3 font-semibold cursor-pointer hover:border-slate-200 border-2 border-transparent"
+          type="submit" value="Submit"
+        />
+      </form>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      time table
+    </title>
+    <style>
+      :root { --flamingo: #dd7878; }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #eff1f5;
+        color: #4c4f69;
+        font-size: 1.3em;
+      }
+      table {
+        overflow: none;
+        border-collapse: collapse;
+        border-color: var(--flamingo);
+      }
+      th, td, tr {
+        padding: 10px;
+        border-top: solid;
+        border-left: solid;
+        border-right: solid;
+        border-width: 2px;
+      }
+      tr, td {
+        border-bottom: solid;
+        text-align: center;
+        border-color: inherit;
+        color: var(--flamingo);
+        background-color: #eff1f5;
+      }
+      .flamingo {
+        background-color: var(--flamingo);
+        color: snow;
+      }
+      .center {
+        width: 100%;
+        height: 98vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .down {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        font-size: 1.4em;
+        letter-spacing: 8px;
+        color: snow;
+        background-color: var(--flamingo);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <table>
+        <th colspan="7"> B.Sc. Computer Application S4</th>
+        <tr>
+          <td class="flamingo">Monday</td>
+          <td>Differential</td>
+          <td>DBMS</td>
+          <td>AWT</td>
+          <td rowspan="5" class="down">BREAK</td>
+          <td>Stat</td>
+          <td>Sampling</td>
+        </tr>
+        <tr>
+          <td class="flamingo">Tuesday</td>
+          <td>Sampling</td>
+          <td>Differential</td>
+          <td>Sampling</td>
+          <td>AWT</td>
+          <td>Stat</td>
+        </tr>
+        <tr>
+          <td class="flamingo">Wednesday</td>
+          <td>Stat</td>
+          <td>DBMS</td>
+          <td>AWT</td>
+          <td>Sampling</td>
+          <td>Sampling</td>
+        </tr>
+        <tr>
+          <td class="flamingo">Thursday</td>
+          <td>Differential</td>
+          <td>Differential</td>
+          <td>DBMS</td>
+          <td>Stat</td>
+          <td>AWT</td>
+        </tr>
+        <tr>
+          <td class="flamingo">Friday</td>
+          <td>Stat</td>
+          <td>DBMS</td>
+          <td>Differential</td>
+          <td>LAB</td>
+          <td>LAB</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
