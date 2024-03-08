@@ -2,8 +2,9 @@
 % arara: xelatex: { synctex: 1, shell: yes }
 % arara: lualatex: { shell: true, interaction: nonstopmode }
 \documentclass{article}	
+\usepackage[a4paper, margin=1in]{geometry}
 \usepackage{minted}
-\usemintedstyle{xcode} % Optional: Set a code style (vs is just an example)
+\usemintedstyle{manni} % Optional: Set a code style (vs is just an example)
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{pdfpages}
@@ -13,63 +14,196 @@
 \date{2023-12-28}
 
 \begin{document}
-  \includepdf[pages={1}]{./Assets/bob.pdf}
-  \newpage
-  \tableofcontents
-  \newpage
+\includepdf[pages={1}]{./Assets/bob.pdf}
+\newpage
+\tableofcontents
+\newpage
 
-  \section{Simple Html Page}
-    \subsection*{Aim}
-    \begin{itemize}
-      \item Design a webpage for your department.
-      \item Utilize paragraphs and lists.
-      \item Create links of the words Wifi and LAN to their respective wikipedia pages
-      \item Insert an image that redirects to the college website
-      \item Change the background color and create a link at the bottom to return to the top
-    \end{itemize}
+\section{Simple Html Page}
+\subsection{Aim}
+\begin{itemize}
+	\item Design a webpage for your department.
+	\item Utilize paragraphs and lists.
+	\item Create links of the words Wifi and LAN to their respective wikipedia pages
+	\item Insert an image that redirects to the college website
+	\item Change the background color and create a link at the bottom to return to the top
+\end{itemize}
 
-    \subsection*{Code}
-      \inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_1/index.html}
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_1/index.html}
 
-    \subsection*{Output}
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{./Assets/p0101.png}
-    \end{figure}
-  \newpage
+\newpage
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./Assets/p0101.png}
+\end{figure}
+\newpage
 
-  \section{Time Table}
-    \subsection*{Aim}
-    \begin{itemize}
-      \item Design the class time table in HTML using table tag
-    \end{itemize}
+\section{Time Table}
+\subsection{Aim}
+\begin{itemize}
+	\item Design the class time table in HTML using table tag
+\end{itemize}
 
-    \subsection*{Code}
-      \inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_2/index.html}
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_2/index.html}
 
-    \subsection*{Output}
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{./Assets/p0201.png}
-    \end{figure}
-  \newpage
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./Assets/p0201.png}
+\end{figure}
+\newpage
 
-  \section{CSS}
-    \subsection*{Aim}
-    \begin{itemize}
-      \item Utlize inline CSS for appending styles to html elements
-      \item Utilize an external CSS Stylesheet
-    \end{itemize}
+\section{css}
+\subsection{aim}
+\begin{itemize}
+	\item utlize inline css for appending styles to html elements
+	\item utilize an external css stylesheet
+\end{itemize}
 
-    \subsection*{Code}
-      \inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_3/index.html}
-      External Stylesheet
-      \inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{css}{./prog_3/styles.css}
+\subsection{code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_3/index.html}
+external stylesheet
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{css}{./prog_3/styles.css}
 
-    \subsection*{Output}
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=1.0\textwidth]{./Assets/p0301.png}
-    \end{figure}
-  \newpage
+\subsection{output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{./assets/p0301.png}
+\end{figure}
+\newpage
+
+\section{form}
+\subsection{aim}
+\begin{itemize}
+	\item Create a simple form
+	\item with fields name age address etc.
+	\item include radio buttons checkboxes and a password field
+\end{itemize}
+
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_4/index.html}
+
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.4\textwidth]{./Assets/p04.png}
+\end{figure}
+\newpage
+
+\section{Semester Re-registration Webpage}
+\subsection{Aim}
+\begin{itemize}
+	\item Design a form with the following entries
+	\item Enrolment No.
+	\item Regional Centre Code (Drop-down)
+	\item Study Centre Code (Drop-down)
+	\item Semester (Drop-down)
+	\item Email Id
+\end{itemize}
+
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_5/index.html}
+
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./Assets/p05.png}
+\end{figure}
+\newpage
+
+\section{Profit or Loss}
+\subsection{Aim}
+\begin{itemize}
+	\item Write a JavaScript solution for the following
+	\item Accept the cost price and selling price with a button
+	\item Create a button to calculate the loss or profit and display it
+\end{itemize}
+
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_6/index.html}
+
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./Assets/p0601.png}
+	\includegraphics[width=0.5\textwidth]{./Assets/p0602.png}
+	\includegraphics[width=0.5\textwidth]{./Assets/p0603.png}
+	\includegraphics[width=0.6\textwidth]{./Assets/p0604.png}
+\end{figure}
+\newpage
+
+\section{Electrical Connection Form}
+\subsection{Aim}
+\begin{itemize}
+	\item Create a form with the following fields
+	\item Permanent or temporary connection (radio button)
+	\item Government or Private house (radio button)
+	\item Name and Email
+\end{itemize}
+
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_7/index.html}
+
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./Assets/p07.png}
+\end{figure}
+\newpage
+
+\section{Word Search}
+\subsection{Aim}
+\begin{itemize}
+	\item Write a JavaScript Program to search for a word in a sentence
+	\item the search should be performed when a appropriate button is clicked
+\end{itemize}
+
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_8/index.html}
+
+\newpage
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./Assets/p08.png}
+\end{figure}
+\newpage
+
+\section{Prime and Armstrong}
+\subsection{Aim}
+\begin{itemize}
+	\item Write a program to determine whether a number is Armstrong or Prime
+\end{itemize}
+
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_9/index.html}
+
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./Assets/p0901.png}
+	\includegraphics[width=0.6\textwidth]{./Assets/p0902.png}
+\end{figure}
+\newpage
+
+\section{Prime and Armstrong}
+\subsection{Aim}
+\begin{itemize}
+	\item Write a program to determine whether a number is Armstrong or Prime
+\end{itemize}
+
+\subsection{Code}
+\inputminted[frame=lines, linenos, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_9/index.html}
+
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./Assets/p0901.png}
+	\includegraphics[width=0.6\textwidth]{./Assets/p0902.png}
+\end{figure}
+\newpage
+
 \end{document}

@@ -16,7 +16,7 @@
             Input
           </button>
           <button 
-            type="button" onclick="profit()"
+            type="button" onclick=profit()
             class="bg-slate-300 rounded-lg p-3 hover:bg-slate-200 active:bg-slate-400"
           >
             Output
@@ -29,16 +29,17 @@
       </div>
     </section>
     <script>
-      var profit;
-      var sell_price;
-      var cost_price;
+      var profit_amt = 0;
+      var sell_price = 0;
+      var cost_price = 0;
+
       function profit() {
-        profit = ((sell_price - cost_price)/cost_price ) * 100;
+        profit_amt = ((sell_price - cost_price)/cost_price ) * 100;
         let result = "";
-        if (profit > 0) {
-          result = "Your profit is " + profit + "%"
+        if (profit_amt > 0) {
+          result = "Your profit is " + profit_amt + "%"
         } else {
-          result = "Your loss is " + profit + "%"
+          result = "Your loss is " + profit_amt + "%"
         }
         document.getElementById("output").innerHTML = result;
       }
