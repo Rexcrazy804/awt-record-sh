@@ -18,38 +18,28 @@
             onclick=compute()
           > Find </button>
         </div>
-        <p id="output" class="text-xl text-teal-400 text-center mt-2"></p>
+        <p id="output" class="text-xl text-center mt-2"></p>
       </div>
     </section>
     <script>
     function compute() {
-      let input = document.getElementById("input").value.trim();
+      let input = document.getElementById("input")
+        .value.trim().split(' ');
       let output = document.getElementById("output");
-      let result = 0;
-      input = input.split(" ");
-      if (input.length != 3) {
-        output.innerHTML = "Invalid Expression";
-        return;
-      }
+
+      let style = "<a class='text-teal-400'>";
+      let result = input[0] + " " + input[1] + " " + input[2] + " = " + style;
+
+      if (input.length != 3) { output.innerHTML = "Invalid Expression"; return; }
       switch (input[1]) {
-        case "+":
-          result = Number(input[0]) + Number(input[2]);
-          break;
-        case "-":
-          result = Number(input[0]) - Number(input[2]);
-          break;
-        case "*":
-          result = Number(input[0]) * Number(input[2]);
-          break;
-        case "/":
-          result = Number(input[0]) / Number(input[2]);
-          break;
-        default:
-          output.innerHTML = "Invalid Expression";
-          break;
+        case "+": result +=  (Number(input[0]) + Number(input[2])); break;
+        case "-": result += Number(input[0]) - Number(input[2]); break;
+        case "*": result += Number(input[0]) * Number(input[2]); break;
+        case "/": result += Number(input[0]) / Number(input[2]); break;
+        default: output.innerHTML = "Invalid Expression"; break;
       }
 
-      output.innerHTML = result;
+      output.innerHTML = result + "</a>";
     }
     </script>
   </body>
