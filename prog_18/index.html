@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jquery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="text-3xl font-semibold text-rose-400 mb-2">Jquery Hide</h1>
+      <div class="bg-slate-100 flex flex-col p-3 rounded-lg drop-shadow-md">
+        <div class="flex flex-row p-3 gap-2 text-white font-semibold justify-evenly">
+          <a 
+            class="bg-pink-400 p-3 rounded-md"
+          > Element </a>
+          <p 
+            id="id"
+            class="bg-teal-400 p-3 pl-6 pr-6 rounded-md"
+          > Id </p>
+          <p 
+            class="cls bg-cyan-400 p-3 pl-4 pr-4 rounded-md"
+          > Class </p>
+        </div>
+        <div class="flex flex-row p-3 gap-2 justify-evenly">
+          <label for="slection" class="text-rose-400 font-semibold text-xl"> What to hide? </label>
+          <select name="selection" class="text-rose-400 text-center font-semibold drop-shadow-sm">
+            <option value="none">none</option>
+            <option value="ele">element</option>
+            <option value="id">id</option>
+            <option value="cls">class</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <script>
+      $(document).ready(function() {
+        $("select").change(function() {
+          var options = $(this).children("option:selected").val();
+
+          // reset
+          $("a").show(); 
+          $("#id").show(); 
+          $(".cls").show(); 
+
+          if (options == "ele") { $("a").hide(); } 
+          else if (options == "id") { $("#id").hide(); } 
+          else if (options == "cls") { $(".cls").hide(); }
+        })
+      })
+    </script>
+  </body>
+</html>
