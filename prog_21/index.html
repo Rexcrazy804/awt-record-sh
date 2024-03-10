@@ -1,0 +1,59 @@
+<!-- AIM : Write a PHP program to enter the customer details (customer no., name, place, email-ID &  -->
+<!-- phone no.) through a webpage and display them in a tabular form in the next page.  -->
+<html>
+  <head>
+    <title>Php Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center p-5 gap-5 text-lg">
+      <h1 class="text-4xl font-semibold text-emerald-400 drop-shadow-xl">Customer Form</h1>
+      <form 
+        class="bg-zinc-50  rounded-lg flex flex-col p-5 gap-3 *:flex *:justify-between *:items-center *:gap-5 *:p-3 font-semibold drop-shadow-md" 
+        action="table.php" method="post"
+      >
+        <label>
+          Customer Number
+          <input
+            class="p-1 px-2 text-center w-5/12 bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
+            type="number" name="cno" required
+          />
+        </label>
+        <label>
+          Name
+          <input
+            class="p-1 px-2 text-center w-3/4 bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
+            type="text" name="name" required
+          />
+        </label>
+        <label>
+          Place
+          <input
+            class="p-1 px-2 text-center bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
+            type="text" name="place" required
+          />
+        </label>
+        <label>
+          Email
+          <input
+            class="p-1 px-2 text-center w-8/12 bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
+            type="email" name="email" required
+          />
+        </label>
+        <label>
+          Phone
+          <input
+            class="p-1 px-2 text-center bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
+            type="number" name="phono" required
+          />
+        </label>
+        <div class="w-11/12 self-center">
+          <input
+            type="submit" value="Submit"
+            class="w-full bg-emerald-400 p-4 text-white text-center cursor-pointer hover:bg-zinc-700 active:bg-zinc-800 rounded-lg"
+          />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
