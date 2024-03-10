@@ -19,6 +19,7 @@
             ";
           }
 
+          // Tables using Flexboxes, you can just use <tr> <th> <td> instead if your prefer it
           echo "<div class='flex flex-row'>";
 
           echo data("Customer No.", $_POST['cno']);
