@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Online Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="w-full h-screen flex flex-col justify-center items-center p-4 gap-4">
+      <form 
+        action="update.php" method="post"
+        class="bg-white flex flex-col gap-6 w-[500px] bg-opacity-95 justify-center items-center drop-shadow-lg pb-10 rounded-md overflow-hidden"
+      >
+        <div class="bg-[url('https://images5.alphacoders.com/111/1115987.jpg')] w-full h-[200px] bg-cover bg-bottom"></div>
+        <div class="flex px-10 items-center gap-10">
+          <div class="flex justify-center flex-col px-10 py-4 items-center gap-5">
+            <input
+              type="text" name="regno" placeholder="Register Number" required
+              class="p-1 px-4 drop-shadow-sm bg-transparent focus:outline-none border-b-2 border-stone-300 focus:border-stone-500"
+            />
+            <input
+              type="number" name="newnum" placeholder="New Mobile Number"
+              class="p-1 px-4 drop-shadow-sm bg-transparent focus:outline-none border-b-2 border-stone-300 focus:border-stone-500"
+            />
+          </div>
+          <input 
+            type="submit" value="Submit"
+            class="ring-4 ring-stone-400 hover:ring-stone-500 active:ring-stone-600 cursor-pointer p-4 text-stone-400 hover:text-stone-500 active:text-stone-600 text-xl font-semibold w-8/12 rounded-md"
+          />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
