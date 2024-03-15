@@ -1,13 +1,11 @@
-<!DOCTYPE html>
 <?php
   date_default_timezone_set("Asia/Kolkata");
   setcookie("visit", date("m.d.y"));
 ?>
-<html lang="en">
+<html>
   <head>
     <title>Cool</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <section class="w-full h-screen flex flex-col justify-center items-center">
