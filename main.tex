@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage[labelformat=empty]{caption}
 
 \title{Record}
 \author{Name}
@@ -520,21 +521,54 @@ update.php
 \inputminted[frame=lines, breaklines, breakanywhere, numberblanklines=false]{php}{./prog_26/update.php}
 
 \subsection{Output}
-\centering
-Submission without entering new phone number
 \begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.4\textwidth]{./Assets/p2601.png}
-	\includegraphics[width=0.4\textwidth]{./Assets/p2602.png}
+  \centering
+  \caption{Submission without entering new phone number}
+  \includegraphics[width=0.4\textwidth]{./Assets/p2601.png}
+  \includegraphics[width=0.4\textwidth]{./Assets/p2602.png}
 \end{figure}
 
 \newpage
-\centering
-Submission with new phone number
 \begin{figure}[h!]
   \centering
-	\includegraphics[width=0.4\textwidth]{./Assets/p2603.png}
-	\includegraphics[width=0.4\textwidth]{./Assets/p2604.png}
+  \caption{Submission with new phone number}
+  \includegraphics[width=0.4\textwidth]{./Assets/p2603.png}
+  \includegraphics[width=0.4\textwidth]{./Assets/p2604.png}
+\end{figure}
+\newpage
+
+\section{Delete Student Entry}
+\subsection{Aim}
+\begin{itemize}
+  \item Write a program to login as Admin and delete the details of a student from the university database
+\end{itemize}
+
+\subsection{Code}
+index.html
+\inputminted[frame=lines, breaklines, breakanywhere, numberblanklines=false]{html}{./prog_27/index.html}
+login.php
+\inputminted[frame=lines, breaklines, breakanywhere, numberblanklines=false]{php}{./prog_27/login.php}
+
+\subsection{Output}
+\begin{figure}[h!]
+	\centering
+  \caption{Correct Password and Valid Entry}
+	\includegraphics[width=0.5\textwidth]{./Assets/p2701.png}
+	\includegraphics[width=0.5\textwidth]{./Assets/p2702.png}
+	\includegraphics[width=0.6\textwidth]{./Assets/p2703.png}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+	\centering
+  \caption{Invalid Entry}
+	\includegraphics[width=0.5\textwidth]{./Assets/p2704.png}
+	\includegraphics[width=0.6\textwidth]{./Assets/p2705.png}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+  \caption{Wrong Password}
+	\includegraphics[width=0.5\textwidth]{./Assets/p2706.png}
+	\includegraphics[width=0.6\textwidth]{./Assets/p2707.png}
 \end{figure}
 \newpage
 
