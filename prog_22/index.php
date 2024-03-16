@@ -6,7 +6,7 @@
   <body>
     <section class="w-full h-screen flex flex-col justify-center items-center p-4 gap-4">
       <h1 class="text-9xl font-semibold text-purple-400">
-        Hello visiter
+        Hello visitor
         <?php
           $filename= "visitors.txt";
           $data = 1;
