@@ -10,17 +10,13 @@
         <?php
           $filename= "visitors.txt";
           $data = 1;
-          if (!file_exists($filename)) {
-            $file = fopen($filename, "w");
-            fwrite($file, 1);
-          } else {
+          if (file_exists($filename)) {
             $file = fopen($filename, "r");
             $data = fread($file, filesize($filename));
             $data = (int)$data + 1;
-
-            $file = fopen($filename, "w");
-            fwrite($file, $data);
           }
+          $file = fopen($filename, "w");
+          fwrite($file, $data);
           
           echo "$data";
         ?>
