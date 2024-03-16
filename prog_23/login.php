@@ -22,7 +22,6 @@
               ";
               return;
             }
-
             $data = $result->fetch_assoc();
             display_data($data['mobile'], $data['name'], $data['bill'], $data['profile']);
           }
@@ -46,12 +45,10 @@
           }
 
           $database = new mysqli("localhost", "root", "root", "record");
-
           if ($database->connect_error) {
             echo "failed to connect to databse";
             return;
           }
-
           serve_data($database);
         ?>
       </div>
