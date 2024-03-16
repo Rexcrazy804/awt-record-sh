@@ -9,58 +9,58 @@
       <form 
         name="registration"
         onsubmit=validate()
-        class="bg-slate-100 flex flex-col p-3 rounded-lg gap-1 font-semibold"
+        class="bg-white flex flex-col p-10 rounded-lg gap-8 font-semibold drop-shadow-xl *:flex *:flex-row *:justify-between *:gap-10 *:items-center"
       >
-        <div class="flex flex-row justify-between gap-3">
-          Name:
+        <div>
+          Name
           <input type="text" 
             name="name"
-            class="text-center font-normal"
+            class="text-center font-normal focus:outline-none border-b-2 border-blue-300 focus:border-blue-400 drop-shadow-md bg-transparent"
           /> 
         </div>
 
-        <div class="flex flex-row justify-between gap-3">
-          Zip Code:  
-          <select class="font-normal"> 
+        <div>
+          Zip Code  
+          <select class="font-normal bg-blue-400 rounded-md px-2 py-1 text-white focus:outline-none"> 
             <option>2018</option> 
             <option>8123</option> 
             <option>1243</option> 
           </select> 
         </div>
-        <div class="flex flex-row justify-between gap-3">
-          Email id:
+        <div>
+          Email id
           <input type="email" 
             name="email"
-            class="text-center font-normal"
+            class="text-center font-normal focus:outline-none border-b-2 border-blue-300 focus:border-blue-400 drop-shadow-md bg-transparent"
           /> 
         </div>
-        <div class="flex flex-row justify-between gap-3">
-          Country code:
+        <div>
+          Country code
           <input type="text"
             name="country"
-            class="text-center font-normal"
+            class="text-center font-normal focus:outline-none border-b-2 border-blue-300 focus:border-blue-400 drop-shadow-md bg-transparent"
           />
         </div>
         <input type="submit" 
-          class="bg-slate-300 hover:bg-slate-200 w-fit p-3 self-center rounded-md mt-2 cursor-pointer"
+          class="bg-blue-400 hover:bg-blue-500 w-[100px] text p-3 rounded-md cursor-pointer text-white text-center font-semibold drop-shadow-md"
         /> 
       </form> 
     </section>
     <script>
-    document.getElementsByName("registration")[0].addEventListener("submit", function (e) { e.preventDefault() });
-    function validate() {
-      let form = document.forms["registration"]
+      document.getElementsByName("registration")[0].addEventListener("submit", function (e) { e.preventDefault() });
+      function validate() {
+        let form = document.forms["registration"]
 
-      if (form["name"].value == "") {
-        alert("name is empty")
-      } else if (form["email"].value == "") {
-        alert("email is empty")
-      } else if (form["country"].value == "") {
-        alert("country code is empty")
-      } else {
-        alert("Form Submitted Successfully")
+        if (form["name"].value == "") {
+          alert("name is empty")
+        } else if (form["email"].value == "") {
+          alert("email is empty")
+        } else if (form["country"].value == "") {
+          alert("country code is empty")
+        } else {
+          alert("Form Submitted Successfully")
+        }
       }
-    }
     </script>
   </body>
 </html>
