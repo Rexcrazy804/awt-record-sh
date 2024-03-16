@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Cool</title>
+    <title>Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
