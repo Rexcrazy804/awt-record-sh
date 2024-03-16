@@ -12,14 +12,14 @@
             echo "
               <div class='flex flex-col *:p-4 *:px-5 items-center text-center g-1'>
                 <h1 class='bg-emerald-400 text-white w-full font-semibold'>$heading</h1>
-                <a class='bg-zinc-50 w-full text-emerald-500 font-semibold'>
+                <a class='bg-white w-full text-emerald-500 font-semibold'>
                   $value
                 </a>
               </div>
             ";
           }
 
-          // Tables using Flexboxes, you can just use <tr> <th> <td> instead if your prefer it
+          // Tables using Flexboxes, you may use <tr> <th> <td> instead
           echo "<div class='flex flex-row'>";
 
           echo data("Customer No.", $_POST['cno']);
@@ -32,7 +32,5 @@
         ?>
       </div>
     </section>
-    <script>
-    </script>
   </body>
 </html>
