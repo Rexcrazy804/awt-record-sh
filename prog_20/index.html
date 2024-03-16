@@ -5,13 +5,9 @@
   </head>
   <body>
     <section class="h-screen flex flex-col justify-center items-center p-4 gap-4">
-      <h1 class="text-3xl font-semibold">
-        Ajax Program
-      </h1>
+      <h1 class="text-3xl font-semibold">Ajax Program</h1>
       <div class="bg-zinc-50 p-10 gap-10 flex flex-col justify-center border-2 border-zinc-600">
-        <a id="content">
-          Before Edit
-        </a>
+        <a id="content">I have not been clicked</a>
         <button
           class="p-4 text-center bg-zinc-600 text-white cursor-pointer active:bg-zinc-800"
           onclick=update()
@@ -20,7 +16,7 @@
     </section>
     <script>
     // NOTE: You will need to run this program via WAMP.
-    // It will not work if you directly run it on the browser due to CORS policy
+    // Also create a data.txt file
     function update() {
       const xhttp = new XMLHttpRequest();
       xhttp.onload = function () {
