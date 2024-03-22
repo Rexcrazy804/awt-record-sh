@@ -9,7 +9,7 @@
   <body>
     <section class="w-full h-screen flex flex-col justify-center items-center p-4 gap-4">
       <div class="flex flex-col p-5 gap-5 justify-center items-center">
-        <?php session_destroy(); ?>
+        <?php session_destroy();?>
         <h1 class='text-6xl text-emerald-400 font-semibold'>
           Session Destroyed Succesfully
         </h1>
