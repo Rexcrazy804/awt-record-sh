@@ -1,57 +1,35 @@
 <html>
-  <head>
-    <title>Php Form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center p-5 gap-5 text-lg">
-      <h1 class="text-4xl font-semibold text-emerald-400 drop-shadow-xl">Customer Form</h1>
-      <form 
-        class="bg-white  rounded-lg flex flex-col p-5 gap-3 *:flex *:justify-between *:items-center *:gap-5 *:p-3 font-semibold drop-shadow-xl" 
-        action="table.php" method="post"
-      >
-        <label>
-          Customer Number
-          <input
-            class="p-1 px-2 text-center w-5/12 bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
-            type="number" name="cno" required
-          />
-        </label>
-        <label>
-          Name
-          <input
-            class="p-1 px-2 text-center w-3/4 bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
-            type="text" name="name" required
-          />
-        </label>
-        <label>
-          Place
-          <input
-            class="p-1 px-2 text-center bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
-            type="text" name="place" required
-          />
-        </label>
-        <label>
-          Email
-          <input
-            class="p-1 px-2 text-center w-8/12 bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
-            type="email" name="email" required
-          />
-        </label>
-        <label>
-          Phone
-          <input
-            class="p-1 px-2 text-center bg-transparent border-b-2 border-emerald-400 focus:outline-none focus:border-emerald-500"
-            type="number" name="phono" required
-          />
-        </label>
-        <div class="w-11/12 self-center">
-          <input
-            type="submit" value="Submit"
-            class="w-full bg-emerald-400 p-4 text-white text-center cursor-pointer hover:bg-emerald-500 active:bg-emerald-600 rounded-lg"
-          />
-        </div>
-      </form>
-    </section>
-  </body>
+
+<head>
+  <title>Php Form</title>
+</head>
+
+<body>
+    <h1>Customer Form</h1>
+    <form action="table.php" method="post">
+      <label>
+        Customer Number
+        <input type="number" name="cno" required />
+      </label>
+      <label>
+        Name
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Place
+        <input type="text" name="place" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Phone
+        <input type="number" name="phono" required />
+      </label>
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+</body>
 </html>

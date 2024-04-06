@@ -1,66 +1,52 @@
 <html>
-  <head>
-    <title>Registration Form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="text-3xl text-blue-400 font-semibold mb-2">Register</h1> 
-      <form 
-        name="registration"
-        onsubmit=validate()
-        class="bg-white flex flex-col p-10 rounded-lg gap-8 font-semibold drop-shadow-xl *:flex *:flex-row *:justify-between *:gap-10 *:items-center"
-      >
-        <div>
-          Name
-          <input type="text" 
-            name="name"
-            class="text-center font-normal focus:outline-none border-b-2 border-blue-300 focus:border-blue-400 drop-shadow-md bg-transparent"
-          /> 
-        </div>
 
-        <div>
-          Zip Code  
-          <select class="font-normal bg-blue-400 rounded-md px-2 py-1 text-white focus:outline-none"> 
-            <option>2018</option> 
-            <option>8123</option> 
-            <option>1243</option> 
-          </select> 
-        </div>
-        <div>
-          Email id
-          <input type="email" 
-            name="email"
-            class="text-center font-normal focus:outline-none border-b-2 border-blue-300 focus:border-blue-400 drop-shadow-md bg-transparent"
-          /> 
-        </div>
-        <div>
-          Country code
-          <input type="text"
-            name="country"
-            class="text-center font-normal focus:outline-none border-b-2 border-blue-300 focus:border-blue-400 drop-shadow-md bg-transparent"
-          />
-        </div>
-        <input type="submit" 
-          class="bg-blue-400 hover:bg-blue-500 w-[100px] text p-3 rounded-md cursor-pointer text-white text-center font-semibold drop-shadow-md"
-        /> 
-      </form> 
-    </section>
-    <script>
-      document.getElementsByName("registration")[0].addEventListener("submit", function (e) { e.preventDefault() });
-      function validate() {
-        let form = document.forms["registration"]
+<head>
+  <title>Registration Form</title>
+</head>
 
-        if (form["name"].value == "") {
-          alert("name is empty")
-        } else if (form["email"].value == "") {
-          alert("email is empty")
-        } else if (form["country"].value == "") {
-          alert("country code is empty")
-        } else {
-          alert("Form Submitted Successfully")
-        }
+<body>
+    <h1>Register</h1>
+    <form name="registration" onsubmit='validate()'>
+      <div>
+        Name
+        <input type="text" name="name" />
+      </div>
+
+      <div>
+        Zip Code
+        <select>
+          <option>2018</option>
+          <option>8123</option>
+          <option>1243</option>
+        </select>
+      </div>
+      <div>
+        Email id
+        <input type="email" name="email" />
+      </div>
+      <div>
+        Country code
+        <input type="text" name="country" />
+      </div>
+      <input type="submit" />
+    </form>
+  <script>
+    document.getElementsByName("registration")[0].addEventListener("submit", function (e) {e.preventDefault()});
+    function validate() {
+      let form = document.forms["registration"]
+
+      if (form["name"].value == "") {
+        alert("name is empty");
+      } else if (form["email"].value == "") {
+        alert("email is empty");
+      } else if (form["country"].value == "") {
+        alert("country code is empty");
+      } else {
+        alert("Form Submitted Successfully");
+        window.location.reload();
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
+
 </html>

@@ -1,51 +1,51 @@
 <html>
-  <head>
-    <title>Re-registeration Form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="text-3xl text-blue-400 font-semibold mb-2">Semester Re-register</h1> 
-      <form class="bg-slate-100 flex flex-col p-3 rounded-lg gap-1 drop-shadow-md">
-        <div class="flex flex-row justify-between gap-3">
-          Enrollment number:
-          <input type="text" required class="text-center"> 
-        </div>
-        <div class="flex flex-row justify-between gap-3">
-          Regional centre code:
-          <select name="rcc" required> 
-            <option value="1001">1001</option> 
-            <option value="1002">1002</option> 
-            <option value="1003">1003</option> 
-          </select> 
-        </div>
 
-        <div class="flex flex-row justify-between gap-3">
-          Study centre code:  
-          <select name="scc" required> 
-            <option value="s1">s1</option> 
-            <option value="s2">s2</option> 
-            <option value="s3">s3</option> 
-          </select> 
-        </div>
+<head>
+  <title>Re-registeration Form</title>
+</head>
 
-        <div class="flex flex-row justify-between gap-3">
-          Semester:  
-          <select name="semester" required> 
-            <option value=1>1</option> 
-            <option value=2>2</option> 
-            <option value=3>3</option> 
-          </select> 
-        </div>
+<body>
+  <section>
+    <h1>Semester Re-register</h1>
+    <form>
+      <div>
+        Enrollment number:
+        <input type="text" required>
+      </div>
+      <div>
+        Regional centre code:
+        <select name="rcc" required>
+          <option value="1001">1001</option>
+          <option value="1002">1002</option>
+          <option value="1003">1003</option>
+        </select>
+      </div>
 
-        <div class="flex flex-row justify-between gap-3">
-          Email-id:
-          <input type="email" required class="text-center"> 
-        </div>
-        <input type="submit" 
-          class="bg-slate-300 hover:bg-slate-200 w-fit p-3 self-center rounded-md mt-2 cursor-pointer"
-        /> 
-      </form> 
-    </section>
-  </body>
+      <div>
+        Study centre code:
+        <select name="scc" required>
+          <option value="s1">s1</option>
+          <option value="s2">s2</option>
+          <option value="s3">s3</option>
+        </select>
+      </div>
+
+      <div>
+        Semester:
+        <select name="semester" required>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+        </select>
+      </div>
+
+      <div>
+        Email-id:
+        <input type="email" required>
+      </div>
+      <input type="submit" />
+    </form>
+  </section>
+</body>
+
 </html>

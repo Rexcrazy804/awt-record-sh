@@ -5,11 +5,10 @@
 <html>
   <head>
     <title>Cool</title>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="text-5xl font-semibold text-rose-500">
+    <section>
+      <h1 style="font-size: 6em; color: red;">
         <?php
           if ($cookie = $_COOKIE["visit"]) {
             echo "Your last visit was at $cookie";

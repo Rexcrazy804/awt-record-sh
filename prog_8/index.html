@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Word Finder</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="text-pink-400 font-semibold text-3xl text-center mb-2"> 
-        Word Finder
-      </h1>
-      <div class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg w-96">
-        <p class="font-semibold">Enter your sentence</p>
-        <input type="text" id="sentence" class="text-center"/>
-        <p class="font-semibold">Enter the word to search</p>
-        <input type="text" id="word" class="text-center text-orange-400"/>
 
-        <button
-          class="p-2 bg-slate-300 hover:bg-slate-200 w-32 self-center rounded-md mt-3 text-xl"
-          onclick=result()
-        > Find </button>
+<head>
+  <title>Word Finder</title>
+</head>
 
-        <p id="output" class="text-xl text-center mt-2"></p>
-      </div>
-    </section>
-    <script>
-      function result() {
-        let sentence = document.getElementById("sentence").value.trim();
-        let search_word = document.getElementById("word").value.trim();
+<body>
+  <section>
+    <h1>
+      Word Finder
+    </h1>
+    <div>
+      <p>Enter your sentence</p>
+      <input type="text" id="sentence" />
+      <p>Enter the word to search</p>
+      <input type="text" id="word" />
 
-        let output = document.getElementById("output");
-        for (let word of sentence.split(" ")) {
-          if (word == search_word) {
-            output.innerHTML = "The word <a class='text-orange-400'>" 
-              + word + 
-              "</a> is found in the string";
-            return;
-          }
+      <button onclick=result()> Find </button>
+
+      <p id="output"></p>
+    </div>
+  </section>
+  <script>
+    function result() {
+      let sentence = document.getElementById("sentence").value.trim();
+      let search_word = document.getElementById("word").value.trim();
+
+      let output = document.getElementById("output");
+      for (let word of sentence.split(" ")) {
+        if (word == search_word) {
+          output.innerHTML = word + " is found in the string";
+          return;
         }
-        output.innerHTML = "Could not find the word inside string";
       }
-    </script>
-  </body>
+      output.innerHTML = "Could not find the word inside string";
+    }
+  </script>
+</body>
+
 </html>

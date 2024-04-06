@@ -1,79 +1,44 @@
 <html>
-  <head>
-    <title>Railway Booking</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-[url('https://cdn.wallpapersafari.com/51/69/G6gxTr.jpg')]">
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="text-3xl font-bold text-zinc-600 mb-2 drop-shadow-xl">Ticket booking</h1>
-      <!-- Note the *: selecter selects every direct children and appends the styles to them -->
-      <form class="bg-zinc-50 flex flex-col p-4 gap-3 drop-shadow-xl *:flex *:flex-row *:gap-4 *:p-2 *:justify-between *:items-center *:font-semibold w-[450px]">
-        <label>
-          Name
-          <input 
-            type="text" name="name" required
-            class="focus:outline-zinc-600 p-1 text-center focus:text-inherit w-3/4 drop-shadow-sm"
-          />
-        </label>
 
-        <label>
-          Email
-          <input 
-            type="email" name="email" required
-            class="focus:outline-zinc-600 p-1 text-center focus:text-inherit w-8/12 drop-shadow-sm"
-          />
-        </label>
+<head>
+  <title>Railway Booking</title>
+</head>
 
-        <label>
-          Gender
-          <div class="flex gap-2">
-            <label class="flex flex-row p-2 gap-2 items-center">
-              <input 
-                type="radio" name="gender" value="male"
-                class="appearance-none w-5 h-5 border-[3px] border-zinc-600 cursor-pointer checked:border-[6px] checked:border-zinc-600 rounded-full"
-              />
-              Male
-            </label>
-            <label class="flex flex-row p-2 gap-2 items-center">
-              <input 
-                type="radio" name="gender" value="female"
-                class="appearance-none w-5 h-5 border-[3px] border-zinc-600 cursor-pointer checked:border-[6px] checked:border-zinc-600 rounded-full"
-              />
-              Female
-            </label>
-            <label class="flex flex-row p-2 gap-2 items-center">
-              <input 
-                type="radio" name="gender" value="other" checked
-                class="appearance-none w-5 h-5 border-[3px] border-zinc-600 cursor-pointer checked:border-[6px] checked:border-zinc-600 rounded-full"
-              />
-              Other
-            </label>
-          </div>
-        </label>
+<body>
+    <h1>Ticket booking</h1>
+    <form>
+      Name
+      <input type="text" name="name" required />
 
-        <label>
-          Date
-          <input 
-            type="date" name="date" required
-            class="p-1 text-center focus:text-inherit drop-shadow-sm"
-          />
-        </label>
+      Email
+      <input type="email" name="email" required />
 
-        <label>
-          Destination
-          <select name="destination" class="p-2 drop-shadow-sm">
-            <option value="kochi">Kochi</option>
-            <option value="triv">Trivandrum</option>
-            <option value="kanoor">Kanoor</option>
-          </select>
-        </label>
-        <div class="self-center w-3/4">
-        <input
-          type="submit" value="Book"
-          class="bg-zinc-700 active:bg-zinc-800 p-4 w-full text-white text-xl text-center cursor-pointer drop-shadow-lg"
-        />
-        </div>
-      </form>
-    </section>
-  </body>
+      <div>
+        Gender
+        <input type="radio" name="gender" value="male" />
+        Male
+
+        <input type="radio" name="gender" value="female" />
+        Female
+
+        <input type="radio" name="gender" value="other" checked />
+        Other
+      </div>
+
+      Date
+      <input type="date" name="date" required />
+
+      Destination
+      <select name="destination">
+        <option value="kochi">Kochi</option>
+        <option value="triv">Trivandrum</option>
+        <option value="kanoor">Kanoor</option>
+      </select>
+
+      <div>
+        <input type="submit" value="Book" />
+      </div>
+    </form>
+</body>
+
 </html>

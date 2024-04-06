@@ -1,32 +1,22 @@
 <html>
-  <head>
-    <title>KSEB Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center p-4 gap-4">
-      <div class="flex drop-shadow-2xl rounded-md overflow-hidden">
-        <div class="lg:bg-[url('https://rare-gallery.com/mocahbig/391790-anime-girl-mikoto-misaka-4k-pc-wallpaper.jpg')] lg:w-[700px] lg:h-[600px] bg-cover bg-center">
-        </div>
-        <form 
-          action="login.php" method="post"
-          class="bg-white flex flex-col p-5 py-10 gap-6 w-[500px] bg-opacity-95 justify-center items-center h-full"
-        >
-          <h1 class="text-3xl font-semibold text-center text-zinc-600">KSEB Login</h1>
-          <input
-            type="text" name="name" placeholder="Username"
-            class="p-1 px-4 drop-shadow-sm bg-transparent focus:outline-none border-b-2 border-zinc-300 focus:border-zinc-500 w-3/4"
-          ></input>
-          <input
-            type="number" name="mobile" placeholder="Mobile number" required
-            class="p-1 px-4 drop-shadow-sm bg-transparent focus:outline-none border-b-2 border-zinc-300 focus:border-zinc-500 w-3/4"
-          />
-          <input 
-            type="submit" value="Submit"
-            class="bg-zinc-600 hover:bg-zinc-700 active:bg-zinc-800 cursor-pointer p-4 mt-5 text-white text-xl font-semibold w-8/12 rounded-md"
-          >
-        </form>
+
+<head>
+  <title>KSEB Login</title>
+</head>
+
+<body>
+  <section>
+    <div>
+      <div>
       </div>
-    </section>
-  </body>
+      <form action="login.php" method="post">
+        <h1>KSEB Login</h1>
+        <input type="text" name="name" placeholder="Username"></input>
+        <input type="number" name="mobile" placeholder="Mobile number" required />
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+</body>
+
 </html>

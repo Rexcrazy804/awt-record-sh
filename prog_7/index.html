@@ -1,75 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Electric Form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="mb-2 text-3xl text-orange-400 font-semibold"> 
-        Electrical Connection Form
-      </h1>
-      <form 
-        class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg"
-        id="myform"
-        onsubmit=validate()
-      >
-        <p class="font-semibold">
-          Specify Connection Type:
-        </p>
-        <div class="flex flex-row gap-3">
-          <input name="connection" type="radio" value="temp" >
-            temporary
-          </input>
-          <input name="connection" type="radio" value="perm" >
-            permanent
-          </input>
-        </div>
 
-        <p class="font-semibold">
-          Specify House Type:
-        </p>
-        <div class="flex flex-row gap-3">
-          <input name="house" type="radio" value="gov" >
-            government house
-          </input>
-          <input name="house" type="radio" value="private" >
-            private house
-          </input>
-        </div>
-        <div class="flex flex-row justify-between">
-          <p class="font-semibold">Name:</p>
-          <input 
-            class="w-3/4 rounded-md text-center"
-            type="text" 
-            placeholder=" Enter your name"
-          />
-        </div>
-        <div class="flex flex-row justify-between">
-          <p class="font-semibold">Email:</p>
-          <input 
-            class="w-3/4 rounded-md text-center"
-            type="email" 
-            placeholder=" Enter your email"
-          />
-        </div>
-        <input 
-          class="bg-slate-300 w-fit self-center p-2 rounded-l mt-3 font-semibold cursor-pointer hover:bg-slate-200"
-          type="submit" value="Submit"
-        />
-      </form>
-    </section>
-    <script>
-      function validate() {
-        let form = document.getElementById("myform");
-        for (let input of form.elements) {
-          if (input.value == "") {
-            alert("Kindly fill all values");
-            return;
-          }
+<head>
+  <title>Electric Form</title>
+</head>
+
+<body>
+  <section>
+    <h1>
+      Electrical Connection Form
+    </h1>
+    <form id="myform" onsubmit=validate()>
+      <p>
+        Specify Connection Type:
+      </p>
+      <div>
+        <input name="connection" type="radio" value="temp">
+        temporary
+        </input>
+        <input name="connection" type="radio" value="perm">
+        permanent
+        </input>
+      </div>
+
+      <p>
+        Specify House Type:
+      </p>
+      <div>
+        <input name="house" type="radio" value="gov">
+        government house
+        </input>
+        <input name="house" type="radio" value="private">
+        private house
+        </input>
+      </div>
+      <div>
+        <p>Name:</p>
+        <input type="text" placeholder=" Enter your name" />
+      </div>
+      <div>
+        <p>Email:</p>
+        <input type="email" placeholder=" Enter your email" />
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </section>
+  <script>
+    function validate() {
+      let form = document.forms[0];
+      for (let input of form.elements) {
+        if (input.value == "") {
+          alert("Kindly fill all values");
+          return;
         }
-        alert("Form Submitted Succesfully");
       }
-    </script>
-  </body>
+      alert("Form Submitted Succesfully");
+    }
+  </script>
+</body>
+
 </html>

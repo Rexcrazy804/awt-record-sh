@@ -1,38 +1,26 @@
 <html>
-  <head>
-    <title>University Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="mb-2 text-3xl text-lime-400 font-semibold"> 
-        Login
-      </h1>
-      <form
-        class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg"
-        action=login.html
-        method="get"
-      >
-        <div class="flex flex-row justify-between">
-          <p class="font-semibold">Name:</p>
-          <input 
-            class="w-3/4 rounded-md text-center"
-            name="name"
-            type="text" required
-          />
-        </div>
-        <div class="flex flex-row justify-between">
-          <p class="font-semibold">Enrollment No.:</p>
-          <input 
-            class="w-2/4 rounded-md text-center"
-            type="number"  required
-          />
-        </div>
-        <input 
-          class="bg-slate-300 w-fit self-center p-2 rounded-md mt-3 font-semibold cursor-pointer hover:bg-slate-200"
-          type="submit" value="Submit"
-        />
-      </form>
-    </section>
-  </body>
+
+<head>
+  <title>University Login</title>
+</head>
+
+<body>
+  <section>
+    <h1>
+      Login
+    </h1>
+    <form action=login.html method="get">
+      <div>
+        <p>Name:</p>
+        <input name="name" type="text" required />
+      </div>
+      <div>
+        <p>Enrollment No.:</p>
+        <input type="number" required />
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </section>
+</body>
+
 </html>

@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Profit Calculator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="text-orange-400 text-3xl font-semibold mb-2">Profit Calculator</h1>
-      <div class="bg-slate-100 flex flex-col p-4 gap-1 rounded-lg">
-        <div class="flex flex-row justify-evenly gap-2 w-52">
-          <button 
-            type="button" onclick="get()"
-            class="bg-slate-300 rounded-lg p-3 hover:bg-slate-200 active:bg-slate-400"
-          >
-            Input
-          </button>
-          <button 
-            type="button" onclick=profit()
-            class="bg-slate-300 rounded-lg p-3 hover:bg-slate-200 active:bg-slate-400"
-          >
-            Output
-          </button>
-        </div>
-        <p 
-          id="output"
-          class="text-orange-400 text-xl text-center font-semibold font-sans"
-        ></p>
+
+<head>
+  <title>Profit Calculator</title>
+</head>
+
+<body>
+  <section>
+    <h1>Profit Calculator</h1>
+    <div>
+      <div>
+        <button type="button" onclick="get()"
+         >
+          Input
+        </button>
+        <button type="button" onclick=profit()
+         >
+          Output
+        </button>
       </div>
-    </section>
-    <script>
-      var profit_amt = 0;
-      var sell_price = 0;
-      var cost_price = 0;
+      <p id="output"></p>
+    </div>
+  </section>
+  <script>
+    var profit_amt = 0;
+    var sell_price = 0;
+    var cost_price = 0;
 
-      function profit() {
-        profit_amt = ((sell_price - cost_price)/cost_price ) * 100;
-        let result = "";
-        if (profit_amt > 0) {
-          result = "Your profit is " + profit_amt + "%"
-        } else {
-          result = "Your loss is " + profit_amt + "%"
-        }
-        document.getElementById("output").innerHTML = result;
+    function profit() {
+      profit_amt = ((sell_price - cost_price) / cost_price) * 100;
+      let result = "";
+      if (profit_amt > 0) {
+        result = "Your profit is " + profit_amt + "%"
+      } else {
+        result = "Your loss is " + profit_amt + "%"
       }
+      document.getElementById("output").innerHTML = result;
+    }
 
-      function get() {
-        cost_price = prompt("Enter Cost Price");
-        sell_price = prompt("Enter Selling Price");
-      }
-    </script>
-  </body>
+    function get() {
+      cost_price = prompt("Enter Cost Price");
+      sell_price = prompt("Enter Selling Price");
+    }
+  </script>
+</body>
+
 </html>

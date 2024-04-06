@@ -1,23 +1,22 @@
 <html>
   <head>
     <title>Fibonacci Series</title>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <section class="w-full h-screen flex flex-col justify-center items-center">
-      <h1 class="text-pink-400 font-semibold text-3xl text-center mb-2"> 
+    <section>
+      <h1> 
         Fibonacci Series
       </h1>
-      <div class="bg-slate-100 flex flex-col p-3 gap-2 rounded-lg w-96">
-        <div class="flex flex-row justify-evenly">
-          <p class="font-semibold">Enter the number of terms</p>
-          <input class="text-center w-32" type="number" id="number"/>
+      <div>
+        <div>
+          <p>Enter the number of terms</p>
+          <input/>
         </div>
         <button
-          class="p-2 bg-slate-300 hover:bg-slate-200 w-32 self-center rounded-md text-xl"
+         
           onclick=getseries()
         > Find </button>
-        <p id="output" class="text-xl text-center"></p>
+        <p id="output"></p>
       </div>
     </section>
     <script>
